@@ -1,2 +1,15 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<%= form_with model: @post do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, rows: 10, cols: 60 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :send %>
+  </div>
+<% end %>

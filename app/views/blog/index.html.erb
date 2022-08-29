@@ -1,2 +1,17 @@
 <h1>BLOG</h1>
-<p>Find me in app/views/blog/index.html.erb</p>
+<% if session[:user_id] %>
+    <h1>Welcome <%= User.find(session[:user_id]).name %> </h1>
+<% end %>
+
+<% @posts.each do |post| %>
+  <div>
+    <strong>Author: </strong> <%= User.find(post.user_id).name %>
+    <p><b>Title: </b><%= post.title %></p>
+    <p><h4>Body:</h4> <%= post.body %> </p>
+    <% if post.user_id == session[:user_id] %>
+        <div> <%= link_to 'Edit post', edit_post_path(post.id) %> </div>
+        <div> <%= link_to 'Show post', post_path(post.id) %> </div>
+    <% end %>
+    <br><br>
+  </div>
+<% end %>
