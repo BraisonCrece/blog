@@ -1,4 +1,5 @@
 <h1>SIGN UP</h1>
+<%= flash[:alert]%>
 <%= form_with model: @user, url: registrations_path do |form| %>
   <div>
     <%= form.label :name %>

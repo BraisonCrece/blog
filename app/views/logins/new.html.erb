@@ -1,5 +1,6 @@
 <h1>Log in</h1>
-<%= notice %>
+<%= flash[:alert] %>
+<br><br>
 <%= form_with model: @user, url: logins_path do |form| %>
   <div>
     <%= form.label :name %>
