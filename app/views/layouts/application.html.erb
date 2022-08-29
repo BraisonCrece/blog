@@ -11,9 +11,11 @@
   </head>
 
   <body>
-    <nav> 
+    <nav>
+    <%= button_to "Home page", root_path, method: :get %>
+    <br>
     <% if session[:user_id] %>
-      <div> <%= button_to "My posts" %> </div> 
+      <div> <%= button_to "My posts", posts_path, method: :get %> </div> 
       <div> <%= button_to "New post", new_post_path, method: :get %> </div>
       <div> <%= button_to "Log out", logout_path, method: :delete %> </div>
     <% else %>

@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :blog, only: %i[index]
   delete "logout", to: "sessions#destroy", as: :logout
 
-  root 'blog#index'
+  root 'blog#index', as: :root
 end

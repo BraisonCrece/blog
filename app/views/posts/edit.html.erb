@@ -1,15 +1,1 @@
-<%= form_with model: @post do |form| %>
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, rows: 10, cols: 60 %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit :send %>
-  </div>
-<% end %>
+<%= render 'form', post: @post %>
