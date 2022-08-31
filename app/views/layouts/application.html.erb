@@ -12,19 +12,20 @@
 
   <body>
     <nav>
-    <%= button_to "Home page", root_path, method: :get %>
-    <br>
-    <% if session[:user_id] %>
-      <div> <%= button_to "My posts", posts_path, method: :get %> </div> 
-      <div> <%= button_to "New post", new_post_path, method: :get %> </div>
-      <div> <%= button_to "Log out", logout_path, method: :delete %> </div>
-    <% else %>
-      <div> <%= button_to "Sign in", new_registration_path, method: :get %> </div>
-      <div> <%= button_to "Log in", new_login_path, method: :get %> </div>
-    <% end %>
+      <div class='nav_btn'><%= button_to "Home page", root_path, method: :get %></div>
+      <% if session[:user_id] %>
+        <div class='nav_btn'> <%= button_to "My posts", posts_path, method: :get %> </div> 
+        <div class='nav_btn'> <%= button_to "New post", new_post_path, method: :get %> </div>
+        <div class='nav_btn'> <%= button_to "Log out", logout_path, method: :delete %> </div>
+      <% else %>
+        <div class='nav_btn'> <%= button_to "Sign in", new_registration_path, method: :get %> </div>
+        <div class='nav_btn'> <%= button_to "Log in", new_login_path, method: :get %> </div>
+      <% end %>
     </nav>
     <br><br>
-    <%=notice%>
+    <% if notice %>
+      <h2><%=notice%></h2>
+    <% end %>    
     <%= yield %>
   </body>
 </html>

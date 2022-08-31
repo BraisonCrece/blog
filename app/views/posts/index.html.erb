@@ -1,7 +1,9 @@
-<h1>My Posts</h1>
+<div id="title"><h1>My Posts</h1></div>
 <% @posts.each do |post| %>
-    <p><b>Title: </b><%= post.title %></p>
-    <p><h4>Body:</h4> <%= post.body %> </p>
-    <div> <%= link_to 'Edit post', edit_post_path(post.id) %> </div>
-    <div> <%= link_to 'Show post', post_path(post.id) %> </div>
+    <div class="post">s
+        <p><b>Title: </b><%= post.title %></p>
+        <p><h4>Body:</h4> <%= post.body %> </p>
+        <div class="link"> <%= link_to 'Edit post', edit_post_path(post.id) %> </div>
+        <div class="link"> <%= link_to 'Show post', post_path(post.id) %> </div>
+    </div>
 <% end %>

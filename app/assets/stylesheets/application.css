@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+  html {
+    background-color: rgba(191, 255, 234, 0.31);
+  }
+
+  body {
+    position: relative;
+    left: 28.5%;
+    width: 50em;
+  }
+
+ body nav .nav_btn {
+  float: left;
+  display: block;
+  box-shadow: 3px 3px #88888850;
+ }
+
+ body nav .nav_btn :hover{
+  float: left;
+  display: block;
+  box-shadow: 3px 3px #88888850;
+  background-color: rgb(182, 225, 225);
+ }
+
+ h1 {
+  color: rgba(43, 43, 124, 0.479);
+  font-size: 3em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+
+
+ h2 {
+  border: none;
+  background-color: rgba(154, 199, 199, 0.061);
+  text-align: center;
+  color: rgba(28, 24, 20, 0.419);
+ }
